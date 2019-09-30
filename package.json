@@ -1,6 +1,15 @@
 {
-  "name": "svelte-app",
-  "version": "1.0.0",
+  "name": "svelte-pomodoro",
+  "version": "0.0.1",
+  "author": "Thibault Goudouneix",
+  "description": "A small Pomodoro app written in Svelte",
+  "keywords": ["pomodoro", "poc", "svelte", "timer", "productivity"],
+  "homepage": "https://github.com/Nilmanduil/SveltePomodoro",
+  "bugs": {
+    "url": "https://github.com/Nilmanduil/SveltePomodoro/issues"
+  },
+  "license": "CC-BY-4.0",
+  "repository": "github:Nilmanduil/SveltePomodoro",
   "devDependencies": {
     "npm-run-all": "^4.1.5",
     "rollup": "^1.12.0",
