@@ -1,7 +1,7 @@
 <script>
     const SECONDS_IN_MINUTES = 60;
     export let workDuration = 25 * SECONDS_IN_MINUTES * 1000; // Duration of a work session in milliseconds
-    export let pauseDuration = 5 * SECONDS_IN_MINUTES * 1000; // Duration of a pause session in milliseconds
+    export let breakDuration = 5 * SECONDS_IN_MINUTES * 1000; // Duration of a break session in milliseconds
 
     let isTimerPaused = false;
 
