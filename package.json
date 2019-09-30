@@ -3,7 +3,13 @@
   "version": "0.0.1",
   "author": "Thibault Goudouneix",
   "description": "A small Pomodoro app written in Svelte",
-  "keywords": ["pomodoro", "poc", "svelte", "timer", "productivity"],
+  "keywords": [
+    "pomodoro",
+    "poc",
+    "svelte",
+    "timer",
+    "productivity"
+  ],
   "homepage": "https://github.com/Nilmanduil/SveltePomodoro",
   "bugs": {
     "url": "https://github.com/Nilmanduil/SveltePomodoro/issues"
@@ -11,6 +17,12 @@
   "license": "CC-BY-4.0",
   "repository": "github:Nilmanduil/SveltePomodoro",
   "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-links": "^5.2.1",
+    "@storybook/addons": "^5.2.1",
+    "@storybook/svelte": "^5.2.1",
+    "babel-loader": "^8.0.6",
     "npm-run-all": "^4.1.5",
     "rollup": "^1.12.0",
     "rollup-plugin-commonjs": "^10.0.0",
@@ -18,7 +30,8 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^4.0.4",
-    "svelte": "^3.0.0"
+    "svelte": "^3.12.1",
+    "svelte-loader": "^2.13.6"
   },
   "dependencies": {
     "sirv-cli": "^0.4.4"
@@ -28,6 +41,8 @@
     "autobuild": "rollup -c -w",
     "dev": "run-p start:dev autobuild",
     "start": "sirv public --single",
-    "start:dev": "sirv public --single --dev"
+    "start:dev": "sirv public --single --dev",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   }
 }
