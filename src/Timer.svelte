@@ -51,7 +51,7 @@
     }
 </script>
 
-<h2>Remaining : {remainingTime}</h2>
+<h2>Remaining :<br/>{Math.floor(remainingTime / SECONDS_IN_MINUTES)} minutes {remainingTime % SECONDS_IN_MINUTES} seconds</h2>
 {#if currentPhase === 'work'}
     <h3>Work phase</h3>
 {:else}
