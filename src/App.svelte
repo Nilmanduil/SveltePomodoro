@@ -66,6 +66,7 @@
 	<ParametersForm />
 </div>
 <div class="mention" style="text-align: center">
-	<a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" title="Wikipedia definition of Pomodoro">Pomodoro method</a>
+	<a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" title="Wikipedia definition of Pomodoro">Pomodoro method</a><br />
+	<a href="https://github.com/Nilmanduil/SveltePomodoro" title="GitHub repository">GitHub Repository of the application</a>
 </div>
 <div class="mention">Favicon made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
