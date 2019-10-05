@@ -8,6 +8,7 @@
     let longBreak = defaultValues.longBreak;
     let longBreakDuration = defaultValues.longBreakDuration * SECONDS_IN_MINUTES; // Duration of a long break session in seconds
     let longBreakEveryNthBreak = defaultValues.longBreakEveryNthBreak; // Frequency of a long break
+    let breaks = 0;
 
     let isTimerPaused = true;
 
@@ -15,6 +16,7 @@
     let currentPhaseDuration;
     let startTime;
     let timer;
+    $: isLongBreak = (currentPhase === "break" && longBreak && breaks % longBreakEveryNthBreak === 0);
 
     let remainingTime = workDuration;
 
@@ -33,6 +35,7 @@
         isTimerPaused = true;
         currentPhase = "work";
         currentPhaseDuration = undefined;
+        breaks = 0;
         clearInterval(timer);
         remainingTime = workDuration;
     }
@@ -62,7 +65,8 @@
             remainingTime = workDuration;
         } else {
             currentPhase = 'break';
-            remainingTime = breakDuration;
+            breaks += 1;
+            remainingTime = (longBreak && breaks % longBreakEveryNthBreak === 0 ? longBreakDuration : breakDuration);
         }
         dispatch('sessionEnd', { session: currentPhase });
     }
@@ -72,6 +76,8 @@
 <h3>
     {#if currentPhase === 'work'}
         Work session
+    {:else if isLongBreak}
+        Long break session
     {:else}
         Break session
     {/if}
