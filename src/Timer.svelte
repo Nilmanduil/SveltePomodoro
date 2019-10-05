@@ -5,7 +5,7 @@
 
     let isTimerPaused = true;
 
-    let currentPhase = "waiting";
+    let currentPhase = "work";
     let currentPhaseDuration;
     let startTime;
     let timer;
@@ -14,7 +14,7 @@
 
     function resetTimer() {
         isTimerPaused = true;
-        currentPhase = "waiting";
+        currentPhase = "work";
         currentPhaseDuration = undefined;
         clearInterval(timer);
         remainingTime = workDuration;
@@ -33,14 +33,35 @@
     function refreshTimer() {
         timer = setInterval(() => {
             remainingTime -= 1;
+            if (remainingTime <= 0) {
+                changePhase();
+            }
         }, 1000);
+    }
+
+    function changePhase() {
+        if (currentPhase === 'break') {
+            currentPhase = 'work';
+            remainingTime = workDuration;
+            // TODO Send event
+        } else {
+            currentPhase = 'break';
+            remainingTime = breakDuration;
+        }
     }
 </script>
 
-<h2>{remainingTime}</h2>
-<button on:click={resetTimer}>Stop</button>
-{#if isTimerPaused}
-    <button on:click={resumeTimer}>Start</button>
+<h2>Remaining : {remainingTime}</h2>
+{#if currentPhase === 'work'}
+    <h3>Work phase</h3>
 {:else}
-    <button on:click={pauseTimer}>Pause</button>
+    <h3>Break phase</h3>
 {/if}
+<div>
+    <button on:click={resetTimer}>Stop</button>
+    {#if isTimerPaused}
+        <button on:click={resumeTimer}>Start</button>
+    {:else}
+        <button on:click={pauseTimer}>Pause</button>
+    {/if}
+</div>
