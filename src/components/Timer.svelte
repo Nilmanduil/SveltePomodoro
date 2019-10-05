@@ -17,6 +17,8 @@
     let startTime;
     let timer;
     $: isLongBreak = (currentPhase === "break" && longBreak && breaks % longBreakEveryNthBreak === 0);
+    $: minutes = Math.floor(remainingTime / SECONDS_IN_MINUTES);
+    $: seconds = remainingTime % SECONDS_IN_MINUTES;
 
     let remainingTime = workDuration;
 
@@ -106,7 +108,7 @@
     }
 </style>
 
-<h2>Remaining :<br/><span class="time">{Math.floor(remainingTime / SECONDS_IN_MINUTES)} minutes {remainingTime % SECONDS_IN_MINUTES} seconds</span></h2>
+<h2>Remaining :<br/><span class="time">{minutes} minute{#if minutes > 1}s{/if} {seconds} second{#if seconds > 1}s{/if}</span></h2>
 <h3>
     {#if currentPhase === 'work'}
         Work session
