@@ -36,11 +36,28 @@
 
 <style>
 	h1 {
-		color: purple;
+		color: #FFF;
+		text-align: center;
+	}
+
+	.timer, .parameters {
+		background: #FBB;
+		max-width: 800px;
+		width: 80%;
+		margin: 10px auto;
+		border: solid 1px #000;
+		padding: 10px;
+	}
+
+	.timer {
 		text-align: center;
 	}
 </style>
 
 <h1>{name}</h1>
-<Timer on:sessionEnd={handleSessionEnd} />
-<ParametersForm />
+<div class="timer">
+	<Timer on:sessionEnd={handleSessionEnd} />
+</div>
+<div class="parameters">
+	<ParametersForm />
+</div>

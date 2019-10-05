@@ -72,7 +72,41 @@
     }
 </script>
 
-<h2>Remaining :<br/>{Math.floor(remainingTime / SECONDS_IN_MINUTES)} minutes {remainingTime % SECONDS_IN_MINUTES} seconds</h2>
+<style>
+    h2 {
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    h2 .time {
+        color: #400;
+    }
+
+    h3 {
+        text-align: center;
+        padding: 5px;
+        display: inline-block;
+        border: dotted 3px #400;
+        background: #FDD;
+        font-style: italic;
+        margin-top: 0;
+    }
+
+    .actions {
+        text-align: center;
+    }
+
+    .actions button {
+        border: solid 3px #400;
+        background: #800;
+        color: #FFDDDD;
+        border-radius: 20px;
+        margin: 0px 5px;
+        font-size: 1.2em;
+    }
+</style>
+
+<h2>Remaining :<br/><span class="time">{Math.floor(remainingTime / SECONDS_IN_MINUTES)} minutes {remainingTime % SECONDS_IN_MINUTES} seconds</span></h2>
 <h3>
     {#if currentPhase === 'work'}
         Work session
@@ -82,7 +116,7 @@
         Break session
     {/if}
 </h3>
-<div>
+<div class="actions">
     <button on:click={resetTimer}>Stop</button>
     {#if isTimerPaused}
         <button on:click={resumeTimer}>Start</button>

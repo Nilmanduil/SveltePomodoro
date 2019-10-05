@@ -9,15 +9,32 @@
 </script>
 
 <style>
-    .inline {
+    label {
+        width: 200px;
+        height: 34px;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        line-height: 32px;
+    }
+
+    input[type=checkbox] {
+        width: 32px;
+        height: 32px;
         display: inline;
+        position: relative;
+        margin-bottom: 0.5em;
+    }
+
+    input {
+        vertical-align: top;
     }
 </style>
 
-<h3>Parameters</h3>
+<h2>Parameters</h2>
 <form>
     <div>
-        <label for="longBreak" class="inline">Long break</label>
+        <label for="longBreak">Long break</label>
         <input type="checkbox"
                id="longBreak"
                name="longBreak"
@@ -25,7 +42,7 @@
                on:change={handleInput} />
     </div>
     <div>
-        <label for="longBreakDuration" class="inline">Long break duration</label>
+        <label for="longBreakDuration">Long break duration</label>
         <input type="number"
                min="0"
                id="longBreakDuration"
@@ -34,7 +51,7 @@
                on:change={handleInput}/>
     </div>
     <div>
-        <label for="longBreakEveryNthBreak" class="inline">Long break every Nth break</label>
+        <label for="longBreakEveryNthBreak">Long break every Nth break</label>
         <input type="number"
                min="0"
                id="longBreakEveryNthBreak"
@@ -43,7 +60,7 @@
                on:change={handleInput}/>
     </div>
     <div>
-        <label for="workDuration" class="inline">Work duration</label>
+        <label for="workDuration">Work duration</label>
         <input type="number"
                min="0"
                id="workDuration"
@@ -52,7 +69,7 @@
                on:change={handleInput}/>
     </div>
     <div>
-        <label for="breakDuration" class="inline">Break duration</label>
+        <label for="breakDuration">Break duration</label>
         <input type="number"
                min="0"
                id="breakDuration"
