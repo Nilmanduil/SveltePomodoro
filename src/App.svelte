@@ -53,7 +53,7 @@
 		text-align: center;
 	}
 
-	.mention a {
+	a {
 		color: #400;
 	}
 </style>
@@ -65,5 +65,7 @@
 <div class="parameters">
 	<ParametersForm />
 </div>
-
+<div class="mention" style="text-align: center">
+	<a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" title="Wikipedia definition of Pomodoro">Pomodoro method</a>
+</div>
 <div class="mention">Favicon made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
