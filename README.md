@@ -68,5 +68,5 @@ surge public
 
 ### Bonus features
 * [ ] User can hear a sound playing when the timer hits `00:00` - denoting that the session has ended
-* [ ] User can change / customize the minutes in both sessions before starting
-* [ ] User can set a **long break** session of 10 minutes. This will be activated every 4th **break** session
+* [x] User can change / customize the minutes in both sessions before starting
+* [x] User can set a **long break** session of 10 minutes. This will be activated every 4th **break** session
