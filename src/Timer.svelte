@@ -52,11 +52,13 @@
 </script>
 
 <h2>Remaining :<br/>{Math.floor(remainingTime / SECONDS_IN_MINUTES)} minutes {remainingTime % SECONDS_IN_MINUTES} seconds</h2>
-{#if currentPhase === 'work'}
-    <h3>Work phase</h3>
-{:else}
-    <h3>Break phase</h3>
-{/if}
+<h3>
+    {#if currentPhase === 'work'}
+        Work session
+    {:else}
+        Break session
+    {/if}
+</h3>
 <div>
     <button on:click={resetTimer}>Stop</button>
     {#if isTimerPaused}

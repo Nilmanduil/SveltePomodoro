@@ -62,9 +62,9 @@ surge public
 ## TODO
 
 ### User Stories
-* [ ] User can see a timer for 25 minutes - the working session
-* [ ] After the working session is over, the User can see a timer for 5 minutes - the break session
-* [ ] User can start / pause, stop and reset the timers
+* [x] User can see a timer for 25 minutes - the working session
+* [x] After the working session is over, the User can see a timer for 5 minutes - the break session
+* [x] User can start / pause, stop and reset the timers
 
 ### Bonus features
 * [ ] User can hear a sound playing when the timer hits `00:00` - denoting that the session has ended
