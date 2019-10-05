@@ -3,7 +3,7 @@
     export let workDuration = 25 * SECONDS_IN_MINUTES; // Duration of a work session in seconds
     export let breakDuration = 5 * SECONDS_IN_MINUTES; // Duration of a break session in seconds
 
-    let isTimerPaused = false;
+    let isTimerPaused = true;
 
     let currentPhase = "waiting";
     let currentPhaseDuration;
@@ -13,7 +13,7 @@
     let remainingTime = workDuration;
 
     function resetTimer() {
-        isTimerPaused = false;
+        isTimerPaused = true;
         currentPhase = "waiting";
         currentPhaseDuration = undefined;
         clearInterval(timer);
@@ -26,7 +26,6 @@
     }
 
     function resumeTimer() {
-        // TODO
         isTimerPaused = false;
         refreshTimer();
     }
