@@ -1,9 +1,10 @@
 <script>
     import { createEventDispatcher } from 'svelte';
+    import { params } from '../shared/parametersStore';
 
     const SECONDS_IN_MINUTES = 60;
-    export let workDuration = 25 * SECONDS_IN_MINUTES; // Duration of a work session in seconds
-    export let breakDuration = 5 * SECONDS_IN_MINUTES; // Duration of a break session in seconds
+    let workDuration = 25 * SECONDS_IN_MINUTES; // Duration of a work session in seconds
+    let breakDuration = 5 * SECONDS_IN_MINUTES; // Duration of a break session in seconds
 
     let isTimerPaused = true;
 
@@ -15,6 +16,11 @@
     let remainingTime = workDuration;
 
     let dispatch = createEventDispatcher();
+
+    params.subscribe((paramsValues) => {
+       console.info({ paramsValues });
+       resetTimer();
+    });
 
     function resetTimer() {
         isTimerPaused = true;

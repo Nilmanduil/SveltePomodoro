@@ -1,5 +1,7 @@
 <script>
-	import Timer from "./Timer.svelte";
+	import Timer from "./components/Timer.svelte";
+	import ParametersForm from "./components/ParametersForm.svelte";
+
 	export let name;
 
 	function handleSessionEnd(event) {
@@ -16,4 +18,5 @@
 </style>
 
 <h1>{name}</h1>
-<Timer on:sessionEnd={handleSessionEnd}/>
+<Timer on:sessionEnd={handleSessionEnd} />
+<ParametersForm />
