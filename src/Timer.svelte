@@ -1,4 +1,6 @@
 <script>
+    import { createEventDispatcher } from 'svelte';
+
     const SECONDS_IN_MINUTES = 60;
     export let workDuration = 25 * SECONDS_IN_MINUTES; // Duration of a work session in seconds
     export let breakDuration = 5 * SECONDS_IN_MINUTES; // Duration of a break session in seconds
@@ -11,6 +13,8 @@
     let timer;
 
     let remainingTime = workDuration;
+
+    let dispatch = createEventDispatcher();
 
     function resetTimer() {
         isTimerPaused = true;
@@ -34,20 +38,20 @@
         timer = setInterval(() => {
             remainingTime -= 1;
             if (remainingTime <= 0) {
-                changePhase();
+                changeSession();
             }
         }, 1000);
     }
 
-    function changePhase() {
+    function changeSession() {
         if (currentPhase === 'break') {
             currentPhase = 'work';
             remainingTime = workDuration;
-            // TODO Send event
         } else {
             currentPhase = 'break';
             remainingTime = breakDuration;
         }
+        dispatch('sessionEnd', { session: currentPhase });
     }
 </script>
 

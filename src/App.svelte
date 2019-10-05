@@ -1,6 +1,11 @@
 <script>
 	import Timer from "./Timer.svelte";
 	export let name;
+
+	function handleSessionEnd(event) {
+		// TODO
+		console.info(event.detail);
+	}
 </script>
 
 <style>
@@ -11,4 +16,4 @@
 </style>
 
 <h1>{name}</h1>
-<Timer />
+<Timer on:sessionEnd={handleSessionEnd}/>
