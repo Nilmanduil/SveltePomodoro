@@ -40,7 +40,7 @@
 		text-align: center;
 	}
 
-	.timer, .parameters {
+	.timer, .parameters, .mention {
 		background: #FBB;
 		max-width: 800px;
 		width: 80%;
@@ -52,6 +52,10 @@
 	.timer {
 		text-align: center;
 	}
+
+	.mention a {
+		color: #400;
+	}
 </style>
 
 <h1>{name}</h1>
@@ -61,3 +65,5 @@
 <div class="parameters">
 	<ParametersForm />
 </div>
+
+<div class="mention">Favicon made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
