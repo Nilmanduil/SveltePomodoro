@@ -4,6 +4,7 @@ This is a [Pomodoro application](https://en.wikipedia.org/wiki/Pomodoro_Techniqu
 
 This project was inspired by [app-ideas](https://github.com/florinpop17/app-ideas), and more precisely [Pomodoro Clock](https://github.com/florinpop17/app-ideas/blob/master/Projects/Pomodoro-Clock.md).
 
+[Demo](https://public.nilmanduil.now.sh)
 ## Requirements
 * [Node.js](https://nodejs.org)
 
