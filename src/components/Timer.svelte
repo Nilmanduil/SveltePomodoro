@@ -1,13 +1,13 @@
 <script>
     import { createEventDispatcher } from 'svelte';
-    import { params } from '../shared/parametersStore';
+    import { params, defaultValues } from '../shared/parametersStore';
 
     const SECONDS_IN_MINUTES = 60;
-    let workDuration = 25 * SECONDS_IN_MINUTES; // Duration of a work session in seconds
-    let breakDuration = 5 * SECONDS_IN_MINUTES; // Duration of a break session in seconds
-    let longBreak = true;
-    let longBreakDuration = 10 * SECONDS_IN_MINUTES; // Duration of a long break session in seconds
-    let longBreakEveryNthBreak = 4; // Frequency of a long break
+    let workDuration = defaultValues.workDuration * SECONDS_IN_MINUTES; // Duration of a work session in seconds
+    let breakDuration = defaultValues.breakDuration * SECONDS_IN_MINUTES; // Duration of a break session in seconds
+    let longBreak = defaultValues.longBreak;
+    let longBreakDuration = defaultValues.longBreakDuration * SECONDS_IN_MINUTES; // Duration of a long break session in seconds
+    let longBreakEveryNthBreak = defaultValues.longBreakEveryNthBreak; // Frequency of a long break
 
     let isTimerPaused = true;
 

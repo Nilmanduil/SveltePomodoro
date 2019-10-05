@@ -1,13 +1,6 @@
 <script>
-    import { params } from "../shared/parametersStore";
+    import { params, defaultValues } from "../shared/parametersStore";
 
-    const defaultValues = {
-        longBreak: true,
-        longBreakDuration: 10,
-        breakDuration: 5,
-        workDuration: 25,
-        longBreakEveryNthBreak: 4
-    };
     let values = defaultValues;
 
     function handleInput() {
