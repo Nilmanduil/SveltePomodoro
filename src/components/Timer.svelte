@@ -60,6 +60,7 @@
     }
 
     function changeSession() {
+        dispatch('sessionEnd', { session: currentPhase });
         if (currentPhase === 'break') {
             currentPhase = 'work';
             remainingTime = workDuration;
@@ -68,7 +69,6 @@
             breaks += 1;
             remainingTime = (longBreak && breaks % longBreakEveryNthBreak === 0 ? longBreakDuration : breakDuration);
         }
-        dispatch('sessionEnd', { session: currentPhase });
     }
 </script>
 

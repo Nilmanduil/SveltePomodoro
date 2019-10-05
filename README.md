@@ -67,6 +67,6 @@ surge public
 * [x] User can start / pause, stop and reset the timers
 
 ### Bonus features
-* [ ] User can hear a sound playing when the timer hits `00:00` - denoting that the session has ended
+* [x] User can hear a sound playing when the timer hits `00:00` - denoting that the session has ended
 * [x] User can change / customize the minutes in both sessions before starting
 * [x] User can set a **long break** session of 10 minutes. This will be activated every 4th **break** session
