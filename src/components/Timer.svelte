@@ -5,6 +5,9 @@
     const SECONDS_IN_MINUTES = 60;
     let workDuration = 25 * SECONDS_IN_MINUTES; // Duration of a work session in seconds
     let breakDuration = 5 * SECONDS_IN_MINUTES; // Duration of a break session in seconds
+    let longBreak = true;
+    let longBreakDuration = 10 * SECONDS_IN_MINUTES; // Duration of a long break session in seconds
+    let longBreakEveryNthBreak = 4; // Frequency of a long break
 
     let isTimerPaused = true;
 
@@ -18,8 +21,12 @@
     let dispatch = createEventDispatcher();
 
     params.subscribe((paramsValues) => {
-       console.info({ paramsValues });
-       resetTimer();
+        workDuration = paramsValues.workDuration * SECONDS_IN_MINUTES;
+        breakDuration = paramsValues.breakDuration * SECONDS_IN_MINUTES;
+        longBreak = paramsValues.longBreak;
+        longBreakDuration = paramsValues.longBreakDuration * SECONDS_IN_MINUTES;
+        longBreakEveryNthBreak = paramsValues.longBreakEveryNthBreak;
+        resetTimer();
     });
 
     function resetTimer() {
