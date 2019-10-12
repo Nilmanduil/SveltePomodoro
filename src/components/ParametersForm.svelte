@@ -20,7 +20,7 @@
 
 <style>
     label {
-        width: 200px;
+        width: 250px;
         height: 34px;
         display: inline-block;
         position: relative;
@@ -48,7 +48,25 @@
 <h2>Parameters</h2>
 <form>
     <div>
-        <label for="longBreak">Long break</label>
+        <label for="workDuration">Work duration (minutes)</label>
+        <input type="number"
+               min="0"
+               id="workDuration"
+               name="workDuration"
+               bind:value={values.workDuration}
+               on:change={handleInput}/>
+    </div>
+    <div>
+        <label for="breakDuration">Break duration (minutes)</label>
+        <input type="number"
+               min="0"
+               id="breakDuration"
+               name="breakDuration"
+               bind:value={values.breakDuration}
+               on:change={handleInput}/>
+    </div>
+    <div>
+        <label for="longBreak">Activate long breaks</label>
         <input type="checkbox"
                id="longBreak"
                name="longBreak"
@@ -56,12 +74,13 @@
                on:change={handleInput} />
     </div>
     <div>
-        <label for="longBreakDuration">Long break duration</label>
+        <label for="longBreakDuration">Long break duration (minutes)</label>
         <input type="number"
                min="0"
                id="longBreakDuration"
                name="longBreakDuration"
                bind:value={values.longBreakDuration}
+               disabled={!values.longBreak}
                on:change={handleInput}/>
     </div>
     <div>
@@ -71,24 +90,7 @@
                id="longBreakEveryNthBreak"
                name="longBreakEveryNthBreak"
                bind:value={values.longBreakEveryNthBreak}
-               on:change={handleInput}/>
-    </div>
-    <div>
-        <label for="workDuration">Work duration</label>
-        <input type="number"
-               min="0"
-               id="workDuration"
-               name="workDuration"
-               bind:value={values.workDuration}
-               on:change={handleInput}/>
-    </div>
-    <div>
-        <label for="breakDuration">Break duration</label>
-        <input type="number"
-               min="0"
-               id="breakDuration"
-               name="breakDuration"
-               bind:value={values.breakDuration}
+               disabled={!values.longBreak}
                on:change={handleInput}/>
     </div>
     <div>
