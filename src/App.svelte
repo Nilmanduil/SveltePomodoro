@@ -4,7 +4,7 @@
 	import { onMount } from 'svelte';
 
 	export let name;
-	let soundNotification = new Audio("beep-08b.mp3");
+	let soundNotification = new Audio("tone-beep.wav");
 	soundNotification.hidden = true;
 	soundNotification.autoplay = false;
 	onMount(() => {
