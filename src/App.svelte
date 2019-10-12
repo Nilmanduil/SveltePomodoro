@@ -111,7 +111,8 @@
 <div class="mention">
 	<h2>Links</h2>
 	<ul>
-		<li><a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank" title="Wikipedia definition of Pomodoro">Pomodoro method on Wikipedia</a><br /></li>
+		<li><a href="https://www.focusboosterapp.com/the-pomodoro-technique" target="_blank" title="English explanation of Pomodoro">Pomodoro method explanation (english)</a><br /></li>
+		<li><a href="http://www.pomodoro-technique.fr" target="_blank" title="French explanation of Pomodoro">Pomodoro method explanation (français)</a><br /></li>
 		<li><a href="https://github.com/Nilmanduil/SveltePomodoro" target="_blank" title="GitHub repository">GitHub Repository of the application</a></li>
 	</ul>
 </div>
