@@ -1,6 +1,6 @@
 {
   "name": "svelte-pomodoro",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Thibault Goudouneix",
   "description": "A small Pomodoro app written in Svelte",
   "keywords": [
