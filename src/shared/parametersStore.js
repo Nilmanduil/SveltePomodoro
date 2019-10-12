@@ -5,6 +5,7 @@ export const defaultValues = {
     longBreakDuration: 10,
     breakDuration: 5,
     workDuration: 25,
-    longBreakEveryNthBreak: 4
+    longBreakEveryNthBreak: 4,
+    background: 3
 };
 export const params = writable(defaultValues);

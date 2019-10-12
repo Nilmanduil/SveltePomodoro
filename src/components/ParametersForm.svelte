@@ -1,11 +1,21 @@
 <script>
     import { params, defaultValues } from "../shared/parametersStore";
+    import { onMount } from 'svelte';
 
     let values = defaultValues;
+    let backgroundSelect;
+    let backgroundValue = defaultValues.background;
 
     function handleInput() {
+        values.background = backgroundSelect.selectedIndex;
+        backgroundValue = backgroundSelect.selectedIndex;
         params.set(values);
     }
+
+    onMount(() => {
+        backgroundSelect = document.getElementById("backgroundSelect");
+        backgroundSelect.selectedIndex = backgroundValue;
+    });
 </script>
 
 <style>
@@ -28,6 +38,10 @@
 
     input {
         vertical-align: top;
+    }
+
+    input, select {
+        width: 220px;
     }
 </style>
 
@@ -76,5 +90,17 @@
                name="breakDuration"
                bind:value={values.breakDuration}
                on:change={handleInput}/>
+    </div>
+    <div>
+        <label for="backgroundSelect">Background</label>
+        <select id="backgroundSelect"
+                name="backgroundSelect"
+                on:change={handleInput}>
+            <option value="0">Dark red background</option>
+            <option value="1">Cherry tomato and blur</option>
+            <option value="2">Cherry tomato in the dark</option>
+            <option value="3">Tomato slices</option>
+            <option value="4">Big tomato</option>
+        </select>
     </div>
 </form>
