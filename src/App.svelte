@@ -98,7 +98,8 @@
      class:bg1={backgroundImage === 1}
      class:bg2={backgroundImage === 2}
      class:bg3={backgroundImage === 3}
-     class:bg4={backgroundImage === 4}></div>
+     class:bg4={backgroundImage === 4}>
+</div>
 
 <h1>{name}</h1>
 <div class="timer">
@@ -107,8 +108,11 @@
 <div class="parameters">
     <ParametersForm />
 </div>
-<div class="mention" style="text-align: center">
-    <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank" title="Wikipedia definition of Pomodoro">Pomodoro method</a><br />
-    <a href="https://github.com/Nilmanduil/SveltePomodoro" target="_blank" title="GitHub repository">GitHub Repository of the application</a>
+<div class="mention">
+	<h2>Links</h2>
+	<ul>
+		<li><a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank" title="Wikipedia definition of Pomodoro">Pomodoro method on Wikipedia</a><br /></li>
+		<li><a href="https://github.com/Nilmanduil/SveltePomodoro" target="_blank" title="GitHub repository">GitHub Repository of the application</a></li>
+	</ul>
 </div>
 <div class="mention">Favicon made by <a href="https://www.flaticon.com/authors/smashicons" target="_blank" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" target="_blank" title="Flaticon">www.flaticon.com</a></div>
